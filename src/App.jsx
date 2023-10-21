@@ -7,7 +7,7 @@ import Header from './components/Header'
 const App = () => {
     return (
 
-        <div className='m-o '>
+        <div className='w-full'>
             <Header />
             <Routes>
                 <Route path='/' exact element={<ProductListing />} />

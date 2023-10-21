@@ -26,9 +26,9 @@ const ProductListing = () => {
         fetchData()
     },[])
     return (
-        <div className="ui grid container">
+ 
             <ProductComponent />
-        </div>
+     
     )
 }
 
