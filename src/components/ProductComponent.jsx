@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 
 const ProductComponent = () => {
@@ -7,7 +8,8 @@ const ProductComponent = () => {
     const renderList = products.map((product) => {
         const { id, title, image, price, category } = product
         return (
-            <div className=" flex flex-row wrap items-center p-[20px]  mt-20  w-[300px]  max-h-39 border-2 border-sky-500 rounded-xl" key={id}>
+
+            <Link to={'product/' + id}><div className=" flex justify-around flex-row wrap items-center p-[20px]  mt-20  w-[300px]  max-h-39 border-2 border-sky-500 rounded-xl" key={id}>
 
                 <div className="flex justify- items-center flex-col">
                     <div className="image min-h-[200px] max-h-[200px] min-w-[150px]  max--[50px] ">
@@ -20,7 +22,8 @@ const ProductComponent = () => {
                     </div>
                 </div>
 
-            </div>)
+            </div></Link>
+             )
     })
     return (
         <div className='w-full  flex justify-evenly items-center flex-col md:flex-row gap-2 flex-wrap  '>{renderList}</div>
