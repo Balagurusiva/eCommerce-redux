@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux'
 const ProductDetail =  () => {
 
     const productDetail = useSelector((state) => state.product) 
+    console.log(productDetail)
     const dispatch = useDispatch() 
 
     const fetchData = async () =>{
@@ -21,7 +22,10 @@ const ProductDetail =  () => {
     }
  
 
-    useEffect(()=>{    fetchData()},[])
+    useEffect(()=>{
+         
+        fetchData()},
+        [])
   return (
     <div>
         {productDetail.id}
